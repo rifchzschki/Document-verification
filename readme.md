@@ -1,6 +1,8 @@
 # Document Verification
 
->![uhuy](assets/uhuuy.png)<br>
+<div align="center">
+  <img src="assets/uhuuy.png" alt="uhuy">
+</div>
 Document Verification is the implementation of the program described in the paper "One-shot Verification of Paper Certificates with Robust Preprocessing." This program consists of several processing stages: preprocessing, text extraction, QR extraction, and verification. Due to certain limitations, our implementation does not include storage on the blockchain. Therefore, during verification, the program is assumed to have already received the original value (pattern). The output of the program is the validity status of the certificate.
 
 # Dependencies

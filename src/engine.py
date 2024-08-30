@@ -30,7 +30,7 @@ class Engine:
         highest_prec = 0
         last_rotate_90 = None
         last_rotate_180 = None
-        print(longest_box_map)
+        # print(longest_box_map)
         for longest_box, is_horizontal in (longest_box_map):
             rotate_90 = False
             rotate_180 = False
@@ -46,10 +46,10 @@ class Engine:
             
             # lakukan 2x recognize ke hasil crop tersebut (normal dan dibalik 180)
             result1= ocr.ocr(cropped, det=False, rec=True, cls=False)
-            print("ini result:",result1)
+            # print("ini result:",result1)
             cropped_tmp = cv2.rotate(cropped, cv2.ROTATE_180)
             result2= ocr.ocr(cropped_tmp, det=False, rec=True, cls=False)
-            print("ini result:",result2)
+            # print("ini result:",result2)
             
             # hasil terbaik akan menjadi direction sebenarnya
             if(result1[0][0][1]<result2[0][0][1]):

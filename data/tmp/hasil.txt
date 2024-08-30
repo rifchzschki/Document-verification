@@ -1,3 +1,0 @@
-Processing ... --> ../data/txtTruth/5.txt
-Hmean: 0.989429175475687
-Valid

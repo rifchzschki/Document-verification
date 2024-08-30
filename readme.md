@@ -94,6 +94,19 @@ Document Verification is the implementation of the program described in the pape
 > The verification process will display the result as the validity status of the image.
 ![input](assets/result.png)
 
+# Important Considerations
+
+1. The selection of field values in the ground truth is crucial. You must carefully choose only the important values, and each should have more than 5 characters. When determining field values, ensure that the order and line format match those on the original certificate. This means that each line in the ground truth should correspond to a single line on the original certificate. It is recommended to avoid including sentences that lack significant meaning.
+
+2. For the QR Extractor, we use the PyBoof library. Occasionally, you may encounter errors with this library. There are two possible causes: the QR code was not found, or there is an issue with the library itself. For the second issue, you may need to modify line 160 in the `Lib/site-packages/pyboof/__init__.py` file to:
+    ```python
+    pbg.mmap_file = mmap.mmap(pbg.mmap_fid.fileno(), length=0)
+    ```
+
+3. In the QR Extractor process, we still face challenges when the QR code is not detected properly. We recommend creating the QR code in a sufficiently large size to ensure it can be read clearly from a distance.
+
+
+
 # Authors
 
 1. Muhamad Rifki Virziadeili Harisman

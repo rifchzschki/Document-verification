@@ -1,10 +1,5 @@
 /__pycache__
-/data/input
-/data/input_rusak
-/data/output
-/data/output_rusak
-/data/output_segmentation
-/data/output_segmentation_rusak
+/data
 /.venv
 venv
 /.vscode

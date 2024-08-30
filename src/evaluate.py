@@ -54,8 +54,8 @@ def calculate_matrix(str_file_path, pattern_file_path):
                 idx_found = j
             j += 1
 
-        print(list_pattern[i])
-        print(prec, "\n")
+        # print(list_pattern[i])
+        # print(prec, "\n")
 
         if prec <= 0.5:
             isFake = True

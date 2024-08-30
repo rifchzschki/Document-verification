@@ -36,8 +36,8 @@ class Engine:
             rotate_180 = False
             # crop box dengan lebar paling panjang
             cropped = crop_image(image, longest_box)
-            cv2.imshow("cropped", cropped)
-            cv2.waitKey(0)
+            # cv2.imshow("cropped", cropped)
+            # cv2.waitKey(0)
             
             # cek tinggi atau lebar box yang paling panjang dan buat gambar menjadi lebar>tinggi (box)
             if(not is_horizontal):
@@ -73,7 +73,6 @@ class Engine:
         cv2.imwrite(self.image, image)
 
         result= ocr.ocr(self.image, det=True, rec=True, cls=False)
-        # print(result)
 
         txts = [line[1][0] for line in result[0]]
         # boxes = [line[0] for line in result[0]]

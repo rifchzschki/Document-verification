@@ -2,6 +2,7 @@ import subprocess, time, argparse
 from evaluate import calculate_matrix
 
 tmp = "../data/tmp/"
+txt = "../data/txtTruth/"
 
 def runCalculate( target, result):
     # Menjalankan program C++ dengan kedua file sebagai argumen
@@ -16,7 +17,7 @@ def runCalculate( target, result):
 def run(target, result):
         print("Verification process...")
         current_time = time.time()
-        runCalculate(tmp+target, tmp+result)
+        runCalculate(txt+target, tmp+result)
         print(f'\n\nProcessing finished in {time.time() - current_time} seconds')
 
 if __name__ == "__main__":
